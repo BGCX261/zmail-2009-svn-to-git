@@ -1,0 +1,138 @@
+Wed Oct  7 22:22:13 PST 2009
+
+INTRODUCTION: This project contains the open source version of
+Z-Mail, plus the original MUSH source code from which Z-Mail was derived.
+I, Dan Heller,  was the original author of both programs, though not
+the sole contributor. More about that in the HISTORY section below.
+
+Z-Mail is an email client--that is, a program a person uses to read
+email. It was, in fact, the first  available email client based entirely
+on internet protocols. In the late 1980s and early 1990s, there were
+plenty of free email clients for unix, but in the commercial realm,
+all other email programs used a proprietary networking protocol and
+mailbox format, and they required a gateway to connect to other email
+systems on the internet. Z-Mail had none of these problems.
+
+Z-Mail was released into the open source community back in 2005 by
+Netmanage Inc at my request. (Again, see the HISTORY section below.) My
+goal in putting Z-Mail online is not to revive it. It's more to keep it
+alive in the public record; to create a form of historical document and
+to provide first-hand glimpse into the source code of a bygone era. If
+someone wants to use it, be my guest.
+
+Until recently, I have built and used zmail successfully on various
+systems ever since the early 1990s without having to examine the source
+code. But when I migrated from a redhat linux to a debian system this
+year, zmail suddenly failed to build anymore, and I found myself unable
+(and uninterested) in dealing with it anymore. So, I punted and resigned
+to using gmail.
+
+In 2009, I and Akkana Peck revived the code and got it working again
+and made it public on Google Code.
+
+HISTORY: In 1985, I started a software project that involved, among
+other things, creating an internet-based email client that had multiple
+user interfaces: a traditional text-based (command-line) prompt, a
+"cursor-driven" interface for text-based terminals, and what was then
+a new graphical user interface for Sun Workstations. (Sun had just
+introduced a more usable and formally written API for the underlying
+windows and graphics displays. At the time, it was called, "SunWindows.")
+
+My mail client was called the Mail User's Shell -- aka MUSH. It's main
+feature was that it was built using abstract modules, each of which
+had program entry points from a light scripting language. This design
+allowed the core functionality to be separate from all its various
+user interfaces--text or graphical. It also made it possible plug in
+or out features that would allow it to be light (and diverse) enough to
+be portable to all UNIX platforms, as well as most any other operation
+system... including MS-DOS 1.1. (Yes, a 16-bit OS running on a PC with
+as little as 64K of RAM.)
+
+Fast-forward five years: much interest in the program had compelled me
+to start a company with my then informal co-developer (Bart Schaefer)
+who was just graduating with his PhD from Oregon Graduate Institute and
+needed a job. He could have had many jobs, but he agreed to join me in
+founding Z-Code Software; our flagship product was called, Z-Mail.
+
+Over the next two years, we evolved Z-Mail from the MUSH code base by
+adding a new GUI, beefed up the underlying core technology, enhanced the
+scripting language, opened up to MacOS and MS-Windows 3.1, supported
+various forms of POP and IMAP, and even created an extension to IMAP
+called Zync -- the Z-Mail Synchronization protocol. (Though the Zync
+server was never really released, it did address many shortcomings of
+IMAP that have never really been addressed since.)
+
+Z-Mail also supported open network-based directory services, and true
+MIME-based email attachments. (In fact, MIME had actually evolved from
+more informal proposals from a variety of prototype email clients,
+including Z-Mail's.)
+
+From 1990 to 1993, our program and company grew in popularity and
+notoriety, winning "Product of the Year" awards from various industries
+across all computing platforms, from PC Magazine to the UNIX workstation
+markets. Virtually every major corporation in the world used Z-Mail at
+some point, though admittedly, only a few deployed it company-wide, or
+beyond several thousand users. Z-Mail was most especially popular among
+IT executives who were stressing about their transition from local-area
+networks to internet-based architectures. (It takes time to force a
+locomotive to change tracks.)
+
+What made Z-Mail popular was that it worked everywhere, it worked
+consistently, and it never crashed. It was (and still remains today)
+the most ported email client ever--if it had a CPU, we probably had
+a version of Z-Mail that ran on it. Sadly and mistakenly--and over
+the objection of my employees--I "sold" the company (some called it a
+"merger") with another, larger (and publicly traded) company, Network
+Computing Devices (NCD). The intention was that we would leverage their
+410 employees and 65 sales offices worldwide. Alas, As many had predicted,
+we fell victim to the classic problem of clashing cultures between that
+of a more staid, publicly traded hardware company, and that of a more
+limber and entrepreneurial software company. I left within 3 months,
+and NCD had all but collapsed shortly thereafter.
+
+Before its own demise, NCD sold Z-Mail to a company called Netmanage
+Inc., who at the time were in the business of selling Windows-based
+networking and productivity applications that ran over TCP/IP. At
+that time, Microsoft did not embrace the internet yet, and was still
+promoting their own proprietary network as the "network of the future,"
+allowing companies like Netmanage to rake in the dough that MS didn't
+think existed. Among Netmanage's suite of desktop applications was their
+own email client, which they then renamed as Z-Mail (once they bought
+the rights to ours), and shelved our original Z-Mail product (save for
+providing support to its existing customer base).
+
+But this wasn't to last long either, as Netmanage also fell into hard
+times in the years after Microsoft finally adopting the internet,
+both literally and figuratively. The original Z-Mail then found
+itself in a state of suspended animation; even though it wasn't
+seeing the light of day, Netmanage still owned the rights. I had
+lobbied intensively for five years for them to release Z-Mail
+to the open source community; they finally did so in 2005. (See
+http://www.danheller.com/zmail/netmanage-letter)
+
+Though I had finally gotten my hands on it again, it wasn't the joy I'd
+hoped it to be. I had already embraced my new profession (photography),
+and didn't really want to put a lot of time into "relearning" Z-Mail. So,
+I wasn't comfortable assuming a technical lead in re-releasing it to
+the open source community, or of coordinating developers. Past engineers
+familiar Z-Mail had moved on, and my partner Bart was always suspicious
+of the "open-source" proclamation from Netmanage, so he wouldn't touch
+it either.
+
+So, there it sat. And has been sitting. Until today.
+
+My posting the source code here is something I should have done in 2005,
+but was selfishly indifferent to Z-Mail by that time. I've never been
+concerned about Bart's fear of liability -- I spend a great deal of time
+in the world of intellectual property, rights, copyright, trademark,
+and related matters, and I know there's no risk. Furthermore, I'm the
+one putting it online, so Bart and/or anyone else can feel absolved of
+psychological stress. No one but me is doing this.
+
+Lastly, I'd like to give a nod of praise and acknowledgment to those
+who worked hard to make Z-Mail succeed, while also apologizing for my
+having inadvertently sentenced it to an early death. Had we waited just
+a few more years, we might have at least benefited from the irrational
+exuberance that shaped the tech boom of the 1990s. After all, if Microsoft
+would buy hotmail for $500M, surely Z-Mail would have gotten that much
+from Netscape. :-)
